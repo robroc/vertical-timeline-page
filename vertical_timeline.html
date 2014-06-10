@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- Give it a proper title  -->
+<title>Harold Pelletier timeline - The Gazette</title>
+
+<link rel="stylesheet" href="http://gazdata-assets.s3.amazonaws.com/libs/vertical-timeline/css/style.css">
+
+<style>
+
+.credit {
+	font-family: arial;
+	font-size: 12px;
+	color: #666;
+	text-transform: uppercase;
+}  
+
+/*  Media query to hide buttons when container width is below 565px  */
+@media screen and (max-width: 565px) { 
+    .vertical-timeline-buttons { display: none}
+}
+
+</style>
+
+</head>
+
+<!-- Scripts for timeline. -->
+<script type="text/javascript" src="http://gazdata-assets.s3.amazonaws.com/libs/vertical-timeline/js/libs.combined.min.js"></script>
+<script type="text/javascript" src="http://gazdata-assets.s3.amazonaws.com/libs/vertical-timeline/js/jquery-veritcal-timeline.min.js"></script>
+
+<!-- Add Google spreadsheet ID to key and sheet name to SheetName -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.timeline').verticalTimeline({
+      key: 'SPREADSHEET_ID',
+      sheetName: 'SHEET_NAME',
+      defaultDirection: 'oldest'
+    });
+  });
+</script>
+
+<body>
+
+
+<div class="timeline"></div>
+<p></p>
+
+<!-- Update the credits -->
+<span class="credit">Compiled by Paul Cherry of The Gazette.</span>
+</body>
+</html>
